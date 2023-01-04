@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "hcsr04.h": "c",
+        "fstream": "c",
+        "*.tcc": "c",
+        "limits": "c",
+        "streambuf": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "main.h": "c"
+    }
+}

@@ -1,0 +1,11 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Project_0101'
+compiling main.c...
+../Core/Src/main.c(102): warning:  #550-D: variable "unit_change"  was set but never used
+    uint8_t unit_change;
+../Core/Src/main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=13948 RO-data=844 RW-data=32 ZI-data=2032  
+FromELF: creating hex file...
+"Project_0101\Project_0101.axf" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:04
