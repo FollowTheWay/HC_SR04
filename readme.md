@@ -1,4 +1,4 @@
-﻿@[TOC](STM32 HAL库+CubeMX 输入捕获 超声波模块)
+@[TOC](STM32 HAL库+CubeMX 输入捕获 超声波模块)
 
 # 前言
 本教程使用的是STM32F103C6T6，利用定时器输入捕获双边沿，实现超声波模块的使用。
@@ -327,7 +327,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 >原子哥的代码采用的是寄存器的思想，设置一个8位的状态寄存器TIM2CH2_CAPTURE_STA
 >该寄存器**最高位**为定时器**是否捕捉到边沿变化**
 >**次高位**为定时器是否开始捕捉**下降沿**，用于记录当前定时器状态
-   
+
 >所以  if ((TIM2CH2_CAPTURE_STA & 0x80) == 0) 该句的意思为如果最高位是0，即还未捕捉到边沿变化时，会进入if语句内（0x80 = 1000 0000）
 
 >if (TIM2CH2_CAPTURE_STA & 0x40) 该句的意思为 次高位如果是1，则进入if语句（0x40 = 0100 0000）
@@ -414,6 +414,3 @@ float getSR04Distance()
 **当返回值一直为0
 1、首先检查配置，特别是cubemx中定时器中断是否开启
 2、超声波模块是否激活，Trig引脚是否拉高了有10个us，一般在15到20us**
-
->[github下载地址：https://github.com/FollowTheWay/HC_SR04.git](https://github.com/FollowTheWay/HC_SR04.git)
-[CSND下载地址：https://download.csdn.net/download/qq_51967985/87196492](https://download.csdn.net/download/qq_51967985/87196492)
